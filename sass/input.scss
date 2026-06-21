@@ -1,0 +1,15 @@
+@mixin FlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin Width_Heigth_Full {
+  width: 99vw;
+  height: 98vh;
+}
+
+body {
+  @include Width_Heigth_Full();
+  @include FlexBox();
+}

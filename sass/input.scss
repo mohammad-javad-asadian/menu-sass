@@ -1,15 +1,155 @@
-@mixin FlexBox {
+// class
+
+@mixin FlexBoxCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin Width_Heigth_Full {
-  width: 99vw;
-  height: 98vh;
+@mixin FlexBoxTop {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+@mixin FlexBoxAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
+@mixin WHFull {
+  width: 98dvw;
+  height: 98dvh;
+}
+
+@mixin borderGlass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// elements
+
 body {
-  @include Width_Heigth_Full();
-  @include FlexBox();
+  @include WHFull();
+  @include FlexBoxTop();
+  overflow: hidden;
+}
+
+header {
+  width: 60%;
+  padding: 0.1rem;
+  border-radius: 16px;
+  @include FlexBoxCenter();
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../public/beautiful-house-with-nature-elements.jpg);
+  background-size: cover;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+li > p {
+  margin-top: 25px;
+  transition: all 150ms 100ms ease-in-out;
+  -webkit-transition: all 150ms 100ms ease-in-out;
+  -moz-transition: all 150ms 100ms ease-in-out;
+  -ms-transition: all 150ms 100ms ease-in-out;
+  -o-transition: all 150ms 100ms ease-in-out;
+}
+
+.effect {
+  width: 100000px;
+  height: 100000px;
+  position: absolute;
+  top: 0px;
+  background-color: #000;
+  opacity: 0.3;
+}
+.nav {
+  width: 100%;
+  padding: 0.5rem;
+  @include borderGlass();
+  @include FlexBoxCenter();
+}
+.nav_img {
+  width: 50px;
+  padding-right: 1rem;
+  border-right: 2px solid #fff;
+}
+.nav_list {
+  width: 80%;
+  padding: 0px;
+  margin: 0px;
+  flex-direction: row;
+  @include FlexBoxAround();
+}
+.nav_list_items {
+  position: relative;
+  font-size: 1.2rem;
+  font-family: system-ui;
+  font-weight: 400;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all 150ms 50ms ease-in-out;
+  -webkit-transition: all 150ms 50ms ease-in-out;
+  -moz-transition: all 150ms 50ms ease-in-out;
+  -ms-transition: all 150ms 50ms ease-in-out;
+  -o-transition: all 150ms 50ms ease-in-out;
+}
+
+.nav_list_items_subList_off {
+  position: absolute;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  transform: translate(-10px, -230px);
+  -webkit-transform: translate(-10px, -230px);
+  -moz-transform: translate(-10px, -230px);
+  -ms-transform: translate(-10px, -230px);
+  -o-transform: translate(-10px, -230px);
+
+  @include FlexBoxCenter();
+  @include borderGlass();
+}
+.nav_list_items_subList_on {
+  position: absolute;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  transform: translate(-5px, 120px);
+  -webkit-transform: translate(-5px, 120px);
+  -moz-transform: translate(-5px, 120px);
+  -ms-transform: translate(-5px, 120px);
+  -o-transform: translate(-5px, 120px);
+  @include FlexBoxCenter();
+  @include borderGlass();
+}
+.nav_list_items_subList_items {
+  margin: 0px;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+// hover
+
+.nav_list_items:hover > p {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }

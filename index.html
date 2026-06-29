@@ -13,26 +13,41 @@
       <nav class="nav">
         <img src="./public/logo.png" alt="logo" class="nav_img" />
         <ul class="nav_list">
-          <li class="nav_list_items">
+          <li class="nav_list_items" data-key="home">
             Home
             <p>^</p>
-          </li>
-          <li class="nav_list_items">
-            Shop
-            <p>^</p>
-            <ul class="nav_list_items_subList_off">
-              <li class="nav_list_items_subList_items">product</li>
-              <li class="nav_list_items_subList_items">product</li>
-              <li class="nav_list_items_subList_items">product</li>
+            <ul class="nav_list_items_subList_off" data-key="home">
+              <li class="nav_list_items_subList_items">shop</li>
+              <li class="nav_list_items_subList_items">me</li>
+              <li class="nav_list_items_subList_items">profile</li>
             </ul>
           </li>
-          <li class="nav_list_items">
+          <li class="nav_list_items" data-key="shop">
+            Shop
+            <p>^</p>
+            <ul class="nav_list_items_subList_off" data-key="shop">
+              <li class="nav_list_items_subList_items">me</li>
+              <li class="nav_list_items_subList_items">boy</li>
+              <li class="nav_list_items_subList_items">woman</li>
+            </ul>
+          </li>
+          <li class="nav_list_items" data-key="category">
             Category
             <p>^</p>
+            <ul class="nav_list_items_subList_off" data-key="category">
+              <li class="nav_list_items_subList_items">bag</li>
+              <li class="nav_list_items_subList_items">leather</li>
+              <li class="nav_list_items_subList_items">school</li>
+            </ul>
           </li>
-          <li class="nav_list_items">
+          <li class="nav_list_items" data-key="about">
             About
             <p>^</p>
+            <ul class="nav_list_items_subList_off" data-key="about">
+              <li class="nav_list_items_subList_items">profile</li>
+              <li class="nav_list_items_subList_items">about</li>
+              <li class="nav_list_items_subList_items">news</li>
+            </ul>
           </li>
         </ul>
       </nav>

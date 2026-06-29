@@ -128,6 +128,7 @@ li > p {
 .nav_list_items_subList_on {
   position: absolute;
   flex-direction: column;
+  transition: all 150ms 100ms ease-in-out;
   gap: 0.5rem;
   padding: 1rem;
   transform: translate(-5px, 120px);
@@ -137,6 +138,10 @@ li > p {
   -o-transform: translate(-5px, 120px);
   @include FlexBoxCenter();
   @include borderGlass();
+  -webkit-transition: all 150ms 100ms ease-in-out;
+  -moz-transition: all 150ms 100ms ease-in-out;
+  -ms-transition: all 150ms 100ms ease-in-out;
+  -o-transition: all 150ms 100ms ease-in-out;
 }
 .nav_list_items_subList_items {
   margin: 0px;
@@ -152,4 +157,10 @@ li > p {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+}
+
+.nav_list_items_subList_on:hover {
+  text-transform: capitalize;
+  scale: 1.1;
+  rotate: -5deg;
 }

@@ -45,15 +45,6 @@ li p {
   background-size: cover;
 }
 
-.effect {
-  width: 100000px;
-  height: 100000px;
-  position: absolute;
-  top: 0px;
-  background-color: #000;
-  opacity: 0.3;
-}
-
 .nav {
   width: 800px;
   padding: 0.5rem;
@@ -253,7 +244,7 @@ li p {
 
 @media (max-width: 840px) {
   .nav {
-    width: 400px;
+    width: 600px;
     justify-content: space-between;
     padding: 0.5rem 2rem;
   }
@@ -277,9 +268,21 @@ li p {
     font-size: 22px;
   }
 }
+@media (max-width: 700px) {
+  .nav {
+    width: 430px;
+  }
+}
 @media (max-width: 480px) {
   .nav {
-    width: 300px;
+    width: 350px;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+  }
+}
+@media (max-width: 430px) {
+  .nav {
+    width: 250px;
     justify-content: space-between;
     padding: 0.5rem 2rem;
   }

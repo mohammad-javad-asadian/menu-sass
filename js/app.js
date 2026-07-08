@@ -26,7 +26,7 @@ menu.forEach(a => {
 })
 
 btnMenu.addEventListener('click', () => {
-    menuModal.style.right = "-30px"
+    menuModal.style.right = "-60px"
 })
 btnClose.addEventListener('click', () => {
     menuModal.style.right = "-3000px"

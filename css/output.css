@@ -4,8 +4,8 @@ body {
   display: flex;
   align-items: start;
   justify-content: center;
-  overflow: hidden;
   margin: 0.5rem 0rem;
+  overflow: hidden;
 }
 
 header {
@@ -20,6 +20,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
+  overflow: hidden;
   background-image: url(../public/beautiful-house-with-nature-elements.jpg);
   background-size: cover;
 }

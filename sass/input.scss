@@ -45,25 +45,16 @@
 body {
   @include WHFull();
   @include FlexBoxTop();
-  margin: 0.5rem 0rem;
+  margin: 0rem;
   overflow: hidden;
+  position: relative;
 }
 
 header {
   padding: 0.1rem;
   border-radius: 16px;
+  margin-top: 1rem;
   @include FlexBoxCenter();
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  overflow: hidden;
-  background-image: url(../public/beautiful-house-with-nature-elements.jpg);
-  background-size: cover;
 }
 
 li {
@@ -81,6 +72,16 @@ li {
     -ms-transition: all 150ms 100ms ease-in-out;
     -o-transition: all 150ms 100ms ease-in-out;
   }
+}
+.bg_body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  inset: 0;
+  background-image: url(../public/beautiful-house-with-nature-elements.jpg);
+  background-size: cover;
 }
 
 .effect {

@@ -1,5 +1,5 @@
 body {
-  width: 98vw;
+  width: 100vw;
   height: 98vh;
   display: flex;
   align-items: start;
@@ -13,9 +13,12 @@ header {
   padding: 0.1rem;
   border-radius: 16px;
   margin-top: 1rem;
+  overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  width: 100vw;
+  height: 98vh;
 }
 
 li {
@@ -60,6 +63,7 @@ li p {
 }
 .nav .nav_icon_menu {
   display: none;
+  position: relative;
 }
 .nav .nav_img {
   width: 50px;
@@ -88,8 +92,7 @@ li p {
   -ms-transition: all 150ms 50ms ease-in-out;
   -o-transition: all 150ms 50ms ease-in-out;
 }
-
-.nav_list_items_subList_off {
+.nav .nav_list_items_subList_off {
   position: absolute;
   flex-direction: column;
   gap: 0.5rem;
@@ -109,8 +112,7 @@ li p {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.nav_list_items_subList_on {
+.nav .nav_list_items_subList_on {
   position: absolute;
   flex-direction: column;
   transition: all 150ms 100ms ease-in-out;
@@ -135,53 +137,45 @@ li p {
   -ms-transition: all 150ms 100ms ease-in-out;
   -o-transition: all 150ms 100ms ease-in-out;
 }
-
-.nav_list_items_subList_items {
+.nav .nav_list_items_subList_items {
   margin: 0px;
   list-style-type: none;
   font-size: 1.2rem;
 }
-
-.nav_list_modal {
+.nav .nav_list_modal {
   width: 300px;
   height: 900px;
-  top: 0px;
-  right: -3000px;
-  border-radius: 20px;
-  border: 2px solid;
-  flex-direction: column;
-  position: absolute;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #fff;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  padding: 0.2rem;
-  cursor: pointer;
-  gap: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.884);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 150ms 50ms ease-in-out;
-  -webkit-transition: all 150ms 50ms ease-in-out;
-  -moz-transition: all 150ms 50ms ease-in-out;
-  -ms-transition: all 150ms 50ms ease-in-out;
-  -o-transition: all 150ms 50ms ease-in-out;
+  flex-direction: column;
+  position: fixed;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  padding: 0.2rem;
+  cursor: pointer;
+  top: 20px;
+  right: -3005px;
+  gap: 2rem;
+  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
 }
-.nav_list_modal .nav_list_modal_icon_close {
+.nav .nav_list_modal .nav_list_modal_icon_close {
   position: absolute;
   top: 20px;
   right: 40px;
   width: 2rem;
 }
-.nav_list_modal .nav_list_items_modal {
+.nav .nav_list_modal .nav_list_items_modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,6 +183,7 @@ li p {
   width: 98%;
   font-weight: 500;
   border-bottom: 2px solid;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
   transition: all 150ms 50ms ease-in-out;
   -webkit-transition: all 150ms 50ms ease-in-out;
@@ -203,7 +198,7 @@ li p {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.nav_list_modal .nav_list_items_subList_off_modal {
+.nav .nav_list_modal .nav_list_items_subList_off_modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,14 +208,14 @@ li p {
   display: none;
   font-weight: 300;
   border-top: 2px solid;
-  padding-top: 0.5rem;
+  padding-top: 3rem;
   transition: all 400ms 20ms ease-in-out;
   -webkit-transition: all 400ms 20ms ease-in-out;
   -moz-transition: all 400ms 20ms ease-in-out;
   -ms-transition: all 400ms 20ms ease-in-out;
   -o-transition: all 400ms 20ms ease-in-out;
 }
-.nav_list_modal .nav_list_items_subList_items_modal {
+.nav .nav_list_modal .nav_list_items_subList_items_modal {
   transition: all 150ms 10ms ease-in-out;
   -webkit-transition: all 150ms 10ms ease-in-out;
   -moz-transition: all 150ms 10ms ease-in-out;
@@ -244,7 +239,7 @@ li p {
 
 @media (max-width: 840px) {
   .nav {
-    width: 600px;
+    width: 800px;
     justify-content: space-between;
     padding: 0.5rem 2rem;
   }
@@ -262,7 +257,7 @@ li p {
     gap: 1rem;
     width: 80%;
     border-top: 2px solid;
-    padding-top: 0.5rem;
+    padding-top: 0.9rem;
   }
   .nav .nav_list_items_subList_items_modal:hover {
     font-size: 22px;
@@ -270,7 +265,7 @@ li p {
 }
 @media (max-width: 700px) {
   .nav {
-    width: 430px;
+    width: 580px;
   }
 }
 @media (max-width: 480px) {
@@ -282,7 +277,7 @@ li p {
 }
 @media (max-width: 430px) {
   .nav {
-    width: 250px;
+    width: 350px;
     justify-content: space-between;
     padding: 0.5rem 2rem;
   }

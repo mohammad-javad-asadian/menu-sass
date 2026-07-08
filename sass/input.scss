@@ -59,6 +59,7 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
+  overflow: hidden;
   background-image: url(../public/beautiful-house-with-nature-elements.jpg);
   background-size: cover;
 }

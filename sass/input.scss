@@ -20,7 +20,6 @@
 @mixin WHFull {
   width: 98dvw;
   height: 98dvh;
-  overflow: hidden;
 }
 
 @mixin borderGlass {
@@ -47,6 +46,7 @@ body {
   @include WHFull();
   @include FlexBoxTop();
   margin: 0.5rem 0rem;
+  overflow: hidden;
 }
 
 header {

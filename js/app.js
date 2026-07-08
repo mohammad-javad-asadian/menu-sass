@@ -2,6 +2,9 @@
 const $ = document
 const menu = $.querySelectorAll('.nav_list_items')
 const subMenu = $.querySelectorAll('.nav_list_items_subList_off')
+const btnMenu = $.querySelector('.nav_icon_menu')
+const btnClose = $.querySelector('.nav_list_modal_icon_close')
+const menuModal = $.querySelector('.nav_list_modal')
 let bolSubMenu = false
 
 let keyUl = ['home', 'shop', 'category', 'about']
@@ -20,4 +23,11 @@ menu.forEach(a => {
             })
         }
     })
+})
+
+btnMenu.addEventListener('click', () => {
+    menuModal.style.right = "-30px"
+})
+btnClose.addEventListener('click', () => {
+    menuModal.style.right = "-3000px"
 })

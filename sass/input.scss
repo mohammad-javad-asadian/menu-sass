@@ -18,8 +18,8 @@
 }
 
 @mixin WHFull {
-  width: 98dvw;
-  height: 98dvh;
+  width: 98vw;
+  height: 98vh;
 }
 
 @mixin borderGlass {
@@ -58,6 +58,8 @@ header {
 header::before {
   content: "";
   position: absolute;
+  width: 100vw;
+  height: 100vh;
   inset: 0;
   overflow: hidden;
   background-image: url(../public/beautiful-house-with-nature-elements.jpg);
